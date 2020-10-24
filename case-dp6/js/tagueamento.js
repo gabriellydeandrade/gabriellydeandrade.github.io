@@ -8,8 +8,10 @@ gtag('config', 'G-4M1SRN6JCW', {
 
 
 var contactEvent = document.getElementById('contato');
-
 contactEvent.addEventListener('click', function(){handleEventClick('menu', 'entre_em_contato', 'link_externo')});
+
+var downloadPDF = document.getElementById('download-pdf');
+downloadPDF.addEventListener('click', function(){handleEventClick('menu', 'download_pdf', 'download_pdf')});
 
 function handleEventClick(category, action, label) {
     gtag('event', action, {
