@@ -6,6 +6,16 @@ gtag('config', 'G-4M1SRN6JCW', {
     'page_path': location.pathname
   });
 
+
+function handleEventClick(category, action, label) {
+    console.log("entrou aqui");
+    console.log(action);
+    gtag('event', action, {
+        'event_category': category,
+        'event_label': label
+        });
+}
+
 // Link menu
 
 var contactEvent = document.getElementById('contato');
@@ -26,11 +36,3 @@ analysisDolor.addEventListener('click', function(){handleEventClick('analise', '
 
 var analysisLorem = document.getElementById('analise-lorem');
 analysisLorem.addEventListener('click', function(){handleEventClick('analise', 'ver_mais', analysisLorem.getAttribute('data-name'))});
-
-
-function handleEventClick(category, action, label) {
-    gtag('event', action, {
-        'event_category': category,
-        'event_label': label
-      });
-  }
