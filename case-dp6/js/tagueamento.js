@@ -7,7 +7,7 @@ gtag('config', 'G-4M1SRN6JCW', {
   });
 
 
-function handleEventClick(category, action, label) {
+function handleEvent(category, action, label) {
     console.log("entrou aqui");
     console.log(action);
     gtag('event', action, {
@@ -17,7 +17,7 @@ function handleEventClick(category, action, label) {
 }
 
 var contactEvent = document.getElementById('contato');
-contactEvent.addEventListener('click', function(){handleEventClick('menu', 'entre_em_contato', 'link_externo')});
+contactEvent.addEventListener('click', function(){handleEvent('menu', 'entre_em_contato', 'link_externo')});
 
 var downloadPDF = document.getElementById('download-pdf');
-downloadPDF.addEventListener('click', function(){handleEventClick('menu', 'download_pdf', 'download_pdf')});
+downloadPDF.addEventListener('click', function(){handleEvent('menu', 'download_pdf', 'download_pdf')});
