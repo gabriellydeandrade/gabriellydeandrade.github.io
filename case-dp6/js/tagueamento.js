@@ -2,14 +2,12 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 
-gtag('config', 'G-4M1SRN6JCW', {
+gtag('config', 'UA-12345-6', {
     'page_path': location.pathname
   });
 
 
 function handleEvent(category, action, label) {
-    console.log("entrou aqui");
-    console.log(action);
     gtag('event', action, {
         'event_category': category,
         'event_label': label
