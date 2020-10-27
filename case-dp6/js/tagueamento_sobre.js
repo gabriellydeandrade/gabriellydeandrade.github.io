@@ -9,3 +9,6 @@ formTelephone.addEventListener('input', function(){handleEvent('contato', formTe
 
 var formAccepted = document.getElementById('aceito');
 formAccepted.addEventListener('input', function(){handleEvent('contato', formAccepted.id, 'preencheu')});
+
+var popup = document.querySelector('.lightbox-content');
+popup.addEventListener('DOMSubtreeModified', function(){handleEvent('contato', 'enviado', 'enviado')});
