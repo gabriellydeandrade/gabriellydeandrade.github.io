@@ -1,14 +1,20 @@
-var formName = document.getElementById('nome');
-formName.addEventListener('input', function(){handleEvent('contato', formName.id, 'preencheu')});
+var formElements = document.querySelectorAll('.contato > ul > li');
 
-var formEmail = document.getElementById('email');
-formEmail.addEventListener('input', function(){handleEvent('contato', formEmail.id, 'preencheu')});
+formElements.forEach(addEvent);
 
-var formTelephone = document.getElementById('telefone');
-formTelephone.addEventListener('input', function(){handleEvent('contato', formTelephone.id, 'preencheu')});
+function addEvent(formElement){
+    var formLabel = formElement.querySelector('label');
 
-var formAccepted = document.getElementById('aceito');
-formAccepted.addEventListener('input', function(){handleEvent('contato', formAccepted.id, 'preencheu')});
+    if (!formLabel) {
+        return
+    }
+
+    var formInput = formElement.querySelector('input')
+    formInput.addEventListener('input', function(){handleEvent('contato', formLabel.htmlFor, 'preencheu')});
+
+}
+
 
 var popup = document.querySelector('.lightbox-content');
 popup.addEventListener('DOMSubtreeModified', function(){handleEvent('contato', 'enviado', 'enviado')});
+
