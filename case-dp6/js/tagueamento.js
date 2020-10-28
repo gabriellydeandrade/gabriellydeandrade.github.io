@@ -14,8 +14,8 @@ function handleEvent(category, action, label) {
         });
 }
 
-var contactEvent = document.getElementById('contato');
+var contactEvent = document.querySelector('.menu-lista-contato');
 contactEvent.addEventListener('click', function(){handleEvent('menu', 'entre_em_contato', 'link_externo')});
 
-var downloadPDF = document.getElementById('download-pdf');
+var downloadPDF = document.querySelector('.menu-lista-download');
 downloadPDF.addEventListener('click', function(){handleEvent('menu', 'download_pdf', 'download_pdf')});
