@@ -1,3 +1,4 @@
 [submodule "subjects-dcc/MAB601-T.E.Engenharia-Software"]
 	path = subjects-dcc/MAB601-T.E.Engenharia-Software
 	url = https://github.com/gabriellydeandrade/MAB601-T.E.Engenharia-Software.git
+	branch = main
